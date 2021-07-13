@@ -10,12 +10,12 @@ var port = 8080;
 var app = express;
 var server =http.Server(app);
 var io = socketIO(server);
-//app.set('port', port)
+app.set('port', port)
 
 server.listen(port, function() {
     console.log('im listening')
 });
 
 app.get("/", function(req, res) {
-    res.senFile();
+    res.senFile(path.join(__dirname, "landing.html"));
 });
