@@ -10,8 +10,10 @@ const port = 8080;
 const app = express();
 const server = http.Server(app);
 const io = socketIO(server);
-
 app.set('port', port);
+
+//
+app.use('/public', express.static(__dirname + "/public"));
 
 server.listen(port, function() {
     console.log('SERVER RUNNING')
