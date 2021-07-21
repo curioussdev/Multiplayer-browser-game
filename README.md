@@ -1,9 +1,9 @@
-##Dependencias
+## Dependencias
 
 - expressjs
 - socket.io
 
-###como instalar?
+### como instalar?
 ```
 npm install express
 npm install socket.io
