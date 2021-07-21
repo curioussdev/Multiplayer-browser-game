@@ -14,5 +14,9 @@ const io = socketIO(server);
 app.set('port', port);
 
 server.listen(port, function() {
-    console.log('Im listening')
+    console.log('SERVER RUNNING')
+});
+
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, "landing.html"))
 });
